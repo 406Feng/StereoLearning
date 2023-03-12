@@ -1,0 +1,201 @@
+# SGBM Disp12MaxDiff # SGBM位移12最大差值
+# 
+#DENSE_DISP12MAXDIFF=-1
+
+# SGBM P1 parameter # SGBM P1参数
+# 
+#DENSE_P1_MULT=2
+
+# SGBM P2 parameter # SGBM P2参数
+# 
+#DENSE_P2_MULT=64
+
+# SGBM PreFilterCap # SGBM预过滤器盖
+# 
+#DENSE_PREFILTER_CAP=60
+
+# Image resize before dense stereo
+#在密集立体声之前调整图像大小
+
+# 
+#DENSE_SCALE=1
+
+# SGBM SpeckleRange # SGBM斑点范围
+# 
+#DENSE_SPECKLE_RANGE=16
+
+# SGBM SpeckleWindowSize # SGBM斑点窗口大小
+# 
+#DENSE_SPECKLE_WINDOW_SIZE=-70
+
+# SGBM Uniqueness ratio # SGBM唯一性比率
+# 
+#DENSE_UNIQUENESS_RATIO=1
+
+# Disable automatic left-right detection
+#禁用自动左右检测
+
+# 
+#DISABLE_AUTO_LEFT_RIGHT=false
+
+# Offset in pixel to be applied. Positive: move right image to the right. Negative: move right image to the left
+#要应用的偏移量（像素）。正：将右图像向右移动。负：将右图像向左移动
+
+# 
+#DISPARITY_OFFSET=0
+
+# Number of dilate steps to be applied to the disparity map
+#应用于视差图的扩张步骤数
+
+# 
+#DISP_DILATE_STEPS=1
+
+# Number of erosion steps to be applied to the disparity map
+#应用于视差图的腐蚀步骤数
+
+# 
+#DISP_EROSION_STEPS=2
+
+# Maximum disparity allowed #允许的最大差异
+# 
+#MAX_DISPARITY=640
+
+# Disparity median filter window size (0 to disable)
+#视差中值滤波器窗口大小（0表示禁用）
+
+# 
+#MEDIAN_FILTER_WSIZE=0
+
+# Minimum disparity allowed (in px)
+#允许的最小差异（像素）
+
+# 
+#MIN_DISPARITY=1
+
+# Minimum number of triangulated point to proceed with plane estimation
+#继续进行平面估计的三角测量点的最小数量
+
+# 
+#MIN_TRIANGULATED_POINTS=100
+
+# Maximum point-plane distance allowed for the reconstructed point-cloud
+#重建点云允许的最大点平面距离
+
+# 
+PLANE_MAX_DISTANCE=3.0 平面最大距离=3.0
+
+# number of RANSAC rounds for plane estimation
+#用于平面估计的RANSAC轮数
+
+# 
+PLANE_RANSAC_ROUNDS=2000 平面_随机_轮次=2000
+
+# RANSAC inlier threshold # RANSAC内部阈值
+# 
+PLANE_RANSAC_THRESHOLD=3.0 平面随机阈值=3.0
+
+# Maximum point x-coordinate for plane refinement
+#平面优化的最大点x坐标
+
+# 
+#PLANE_REFINE_XMAX=9999
+
+# Minimum point x-coordinate for plane refinement
+#平面优化的最小点x坐标
+
+# 
+#PLANE_REFINE_XMIN=-9999
+
+# Maximum point y-coordinate for plane refinement
+#平面优化的最大点y坐标
+
+# 
+#PLANE_REFINE_YMAX=9999
+
+# Minimum point y-coordinate for plane refinement
+#平面优化的最小点y坐标
+
+# 
+#PLANE_REFINE_YMIN=-9999
+
+# use point to camera distance as weight during LLS plane fitting
+#在LLS平面拟合期间使用点到相机的距离作为权重
+
+# 
+#PLANE_WEIGHT_PROPORTIONAL_TO_DISTANCE=true
+
+# Random seed for ransac. -1 to use system timer
+#随机种子ransac。使用系统计时器
+
+# 
+#RANDOM_SEED=-1
+
+# Save final reconstructed point cloud also in PLY format
+#也以PLY格式保存最终重建的点云
+
+# 
+SAVE_AS_PLY=false 保存存为PLY=假
+
+# Save in 16-bit compressed format
+#以16位压缩格式保存
+
+# 
+#SAVE_COMPRESSED=true
+
+# Save 3D point cloud before plane outlier removal
+#删除平面异常值之前保存3D点云
+
+# 
+SAVE_FULL_MESH=false 保存完整网格=假
+
+# Save a scaled version of input images (Set 1 to skip or a value <1 to specify scale ratio)
+#保存输入图像的缩放版本（设置1跳过或值〈1指定缩放比例）
+
+# 
+#SAVE_INPUT_SCALE=0.3
+
+# Swaps left-right images (only valid if DISABLE_AUTO_LEFT_RIGHT is set)
+#交换左右图像（仅在设置DISABLE_AUTO_LEFT_RIGHT时有效）
+
+# 
+#SWAP_LEFT_RIGHT=false
+
+# Triangulation bounding box bottom coordinate in px wrt. the left image (-1 to disable)
+#三角形边界框底部坐标（px wrt）左侧图像（-1表示禁用）
+
+# 
+#TRIANG_BBOX_BOTTOM=-1
+
+# Triangulation bounding box left coordinate in px wrt. the left image (-1 to disable)
+#三角形边界框左坐标（像素宽度）左侧图像（-1表示禁用）
+
+# 
+#TRIANG_BBOX_LEFT=-1
+
+# Triangulation bounding box right coordinate in px wrt. the left image (-1 to disable)
+#以像素为单位的三角边界框右坐标。左侧图像（-1表示禁用）
+
+# 
+#TRIANG_BBOX_RIGHT=-1
+
+# Triangulation bounding box top coordinate in px wrt. the left image (-1 to disable)
+#三角形边界框顶部坐标（以像素为单位）左侧图像（-1表示禁用）
+
+# 
+#TRIANG_BBOX_TOP=-1
+
+# Minimum ray angle for triangulation (in degrees)
+#三角测量的最小光线角度（度）
+
+# 
+#TRIANG_MIN_ANGLE=20
+
+# Stereo match window size #立体匹配窗口大小
+# 
+#WINSIZE=13
+
+# Z-gap percentile for outlier filtering
+#离群值过滤的Z间隙百分位数
+
+# 
+#ZGAP_PERCENTILE=99
