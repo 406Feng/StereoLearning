@@ -103,8 +103,8 @@ imr_rectified = cv2.cvtColor(imr_rectified, cv2.COLOR_BGR2GRAY)
 
 # wfeng: 创建GUI进行观察
 # Creating an object of StereoBM algorithm
-# stereo = cv2.StereoBM_create()
-stereo = cv2.StereoSGBM_create()
+stereo = cv2.StereoBM_create()
+# stereo = cv2.StereoSGBM_create()
 
 def nothing(x):
     pass
@@ -141,10 +141,10 @@ while True:
     # Setting the updated parameters before computing disparity map
     stereo.setNumDisparities(numDisparities)
     stereo.setBlockSize(blockSize)
-    # stereo.setPreFilterType(preFilterType)
-    # stereo.setPreFilterSize(preFilterSize)
+    stereo.setPreFilterType(preFilterType)
+    stereo.setPreFilterSize(preFilterSize)
     stereo.setPreFilterCap(preFilterCap)
-    # stereo.setTextureThreshold(textureThreshold)
+    stereo.setTextureThreshold(textureThreshold)
     stereo.setUniquenessRatio(uniquenessRatio)
     stereo.setSpeckleRange(speckleRange)
     stereo.setSpeckleWindowSize(speckleWindowSize)
