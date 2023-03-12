@@ -120,7 +120,7 @@ cv2.createTrackbar('preFilterCap', 'disp', 5, 62, nothing)
 # cv2.createTrackbar('textureThreshold', 'disp', 10, 100, nothing)
 cv2.createTrackbar('uniquenessRatio', 'disp', 15, 100, nothing)
 cv2.createTrackbar('speckleRange', 'disp', 0, 100, nothing)
-cv2.createTrackbar('speckleWindowSize', 'disp', 3, 25, nothing)
+cv2.createTrackbar('speckleWindowSize', 'disp', 3, 70, nothing)
 cv2.createTrackbar('disp12MaxDiff', 'disp', 5, 25, nothing)
 cv2.createTrackbar('minDisparity', 'disp', 5, 25, nothing)
 
@@ -153,8 +153,8 @@ while True:
     stereo.setDisp12MaxDiff(disp12MaxDiff)
     stereo.setMinDisparity(minDisparity)
 
-    stereo.setP1(8*blockSize*blockSize)
-    stereo.setP2(32 * blockSize * blockSize)
+    stereo.setP1(2)
+    stereo.setP2(64)
 
     disparity = stereo.compute(iml_rectified, imr_rectified)  # wfeng
     # Converting to float32
