@@ -124,6 +124,8 @@ cv2.createTrackbar('speckleWindowSize', 'disp', 3, 25, nothing)
 cv2.createTrackbar('disp12MaxDiff', 'disp', 5, 25, nothing)
 cv2.createTrackbar('minDisparity', 'disp', 5, 25, nothing)
 
+
+
 while True:
     # Updating the parameters based on the trackbar positions
     numDisparities = cv2.getTrackbarPos('numDisparities', 'disp') * 16
@@ -150,6 +152,9 @@ while True:
     stereo.setSpeckleWindowSize(speckleWindowSize)
     stereo.setDisp12MaxDiff(disp12MaxDiff)
     stereo.setMinDisparity(minDisparity)
+
+    stereo.setP1(8*blockSize*blockSize)
+    stereo.setP2(32 * blockSize * blockSize)
 
     disparity = stereo.compute(iml_rectified, imr_rectified)  # wfeng
     # Converting to float32
